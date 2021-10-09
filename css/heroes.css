@@ -94,10 +94,14 @@ h1{
 p{
     color: rgba(255,255,255,.55);
 }
-
+@media(max-width: 425px){
+    .col-12 .rightScreen .heigth:hover{
+        transform: scale(1.5);
+    }
+}
 @media(max-width: 767px){
     .strenght, .agility, .intelligence{
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 }
 @media(max-width: 425px){
@@ -186,3 +190,4 @@ h6{
 *{
     font-family: "Reaver",serif;
 }
+
