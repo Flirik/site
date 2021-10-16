@@ -1,0 +1,36 @@
+*{
+    font-family: "Reaver",serif;
+    color: rgba(255, 255, 255, .55);
+}
+
+option, select, input{
+    background: #000;
+}
+
+input{
+    width: 100px;
+}
+
+.widthforform{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    flex-wrap: wrap;
+}
+
+.flexbetween{
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    padding: 5px;
+}
+
+.justify-content-center{
+    display: flex;
+    justify-content: center;
+}
+
+/* .justify-content-between{
+    display: flex;
+    justify-content: space-between;
+} */

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calc.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="bg">
+        <div class="bgblack">
+            <header>
+              <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                  <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                      <div class="navbar-nav">
+                        <a class="nav-link" href="heroes.html">Герои</a>
+                        <a class="nav-link" href="#">Патчи</a>
+                        <a class="nav-link" href="#">Билды</a>
+                      </div>
+                      <div class="navbar-nav">
+                        <a class="nav-link" href="#">Калькулятор</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </header>
+          </div>
+
+        <div class="container justify-content-between">
+          <div class="row ">
+            <div class="col-md-3 col-sm-0"></div>
+            <div class="col-md-6 col-sm-12">
+              <form action="" class="">
+                <div class="flexbetween">
+                  <label for="">Уровень персонажа</label>
+                  <input type="number" id="start" min="0" max="30">
+                </div>
+                <div class="flexbetween"> 
+                  <label for="">Желаемый уровень персонажа</label>
+                  <input type="number" id="end" min="0" max="30">
+                </div>
+                <div class="flexbetween">
+                  <label for="">Кол-во опыта</label>
+                  <input type="number" id="experiance" min="0" max="3000" value="0">
+                </div>
+                <div class="flexbetween">
+                  <label for="">Кол-во игр в день</label>
+                  <input type="number" id="gameonday">
+                </div>
+                <div  class="flexbetween">
+                  <label for="">Win Rate</label>
+                  <select id="winrate">
+                      <option value="10">10%</option>
+                      <option value="20">20%</option>
+                      <option value="30">30%</option>
+                      <option value="40">40%</option>
+                      <option value="50">50%</option>
+                      <option value="60">60%</option>
+                      <option value="70">70%</option>
+                      <option value="80">80%</option>
+                      <option value="90">90%</option>
+                      <option value="100">100%</option>
+                  </select>
+                </div>
+                <div class="justify-content-center">
+                  <input type="button" value="send" onclick="f()" >
+                </div>
+              </form>
+            </div>
+            <div class="col-md-3 col-sm-0"></div>
+          </div>
+        </div>
+
+        <div class="bgblack">
+          <footer class="container">
+            <div class="flexbetween">
+              <button id="about">ABOUT US ඞ</button>
+              <button id="contact">CONTACT US</button>
+            </div>
+          </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    <script src="js/calcV2.js"></script>
+</body>
+</html>
