@@ -1,5 +1,4 @@
 *{
-    font-family: "Reaver",serif;
     color: rgba(255, 255, 255, .55);
 }
 
@@ -18,7 +17,7 @@ input{
     flex-wrap: wrap;
 }
 
-.flexbetween{
+.flexbetween1{
     display: flex;
     justify-content: space-between;
     /* flex-wrap: wrap; */

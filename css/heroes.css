@@ -94,14 +94,10 @@ h1{
 p{
     color: rgba(255,255,255,.55);
 }
-@media(max-width: 425px){
-    .col-12 .rightScreen .heigth:hover{
-        transform: scale(1.3);
-    }
-}
+
 @media(max-width: 767px){
     .strenght, .agility, .intelligence{
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
 }
 @media(max-width: 425px){
@@ -187,7 +183,18 @@ h6{
     padding: -1px;
 }
 
-*{
-    font-family: "Reaver",serif;
+.headerabsol{
+    position: absolute;
 }
 
+/* header{
+    margin: 0;
+}
+.main{
+    height: 100vh;
+    padding-top: 100px;
+} */
+
+/* .container-fluid{
+    padding-left: 10px;
+} */

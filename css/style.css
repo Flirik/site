@@ -154,7 +154,7 @@ button:hover{
     }
 }
 *{
-    font-family: "Reaver",serif;
+    font-family: "Reaver",serif!important;
 }
 
 .navbar-collapse{
@@ -163,4 +163,25 @@ button:hover{
 }
 .show, .collapse{
     display: block;
+}
+
+.headerabsol{
+    position: absolute;
+}
+
+header{
+    margin: 0;
+}
+.main{
+    padding-top: 100px;
+}
+
+.footerabsol{
+    margin-top: auto;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
