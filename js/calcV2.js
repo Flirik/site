@@ -1,4 +1,5 @@
 let loserate, winrate, result, gameonday, start, end, i, need, needday, weekly, exp, err, a, b;
+error = "Пожалуйста заполните все поля"
 
 function f(){
     start = document.getElementById('start').value;
@@ -10,9 +11,10 @@ function f(){
 
 
     if(exp == "" || gameonday == "" || start == "" || end == ""){
-        alert("Вы ввели некорректные данные")
+        document.getElementById('error').innerHTML = error;
     }else{
         if(end>start){
+            document.getElementById('error').innerHTML = "";
             a = 0
             b = 0
             result = 0
