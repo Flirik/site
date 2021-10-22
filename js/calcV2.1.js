@@ -1,18 +1,180 @@
 let loserate, winrate, result, gameonday, start, end, i, need, needday, weekly, exp, err, a, b;
 error = "Пожалуйста заполните все поля"
+// document.getElementById('maxday').style.padding = '0px';
 
-function f(){
+// function swap1(){
+//     document.getElementById('maxday').style.padding = '0px';
+//     document.getElementById('lvlherostart').style.padding = '5px';
+//     document.getElementById('lvlheroend').style.padding = '5px';
+//     document.getElementById('expiriancehero').style.padding = '5px';
+//     document.getElementById('maxday').innerHTML = ''
+//     document.getElementById('lvlherostart').innerHTML = '<label for="">Уровень персонажа</label><input type="number" id="start" min="0" max="30">'
+//     document.getElementById('lvlheroend').innerHTML = '<label for="">Желаемый уровень персонажа</label><input type="number" id="end" min="0" max="30">'
+//     document.getElementById('expiriancehero').innerHTML = '<label for="">Кол-во опыта</label><input type="number" id="experiance" min="0" max="3000" value="0">'
+//     document.getElementById('but').innerHTML = '<input type="button" value="Посчитать дни" onclick="days()">'
+//     document.getElementById('weekly').style.padding = '0px';
+//     document.getElementById('weekly').innerHTML = ''
+//     document.getElementById('error').innerHTML = ''
+//     document.getElementById('answer').innerHTML = ''
+// }
+
+// function swap2(){
+//     document.getElementById('lvlherostart').style.padding = '0px';
+//     document.getElementById('lvlheroend').style.padding = '0px';
+//     document.getElementById('maxday').style.padding = '5px';
+//     document.getElementById('maxday').innerHTML = '<label for="">Кол-во дней</label><input type="number" id="days">'
+//     document.getElementById('lvlherostart').innerHTML = ''
+//     document.getElementById('lvlheroend').innerHTML = ''
+//     document.getElementById('weekly').style.padding = '5px';
+//     document.getElementById('weekly').innerHTML = '<label for="">Задания героя</label><input type="checkbox" id="weeklytwo">'
+//     document.getElementById('but').innerHTML = '<input type="button" value="Посчитать опыт" onclick="experiance1()">'
+//     document.getElementById('expiriancehero').style.padding = '0px';
+//     document.getElementById('expiriancehero').innerHTML = ''
+//     document.getElementById('error').innerHTML = ''
+//     document.getElementById('answer').innerHTML = ''
+// }
+
+// function swap3(){
+//     document.getElementById('maxday').style.padding = '0px';
+//     document.getElementById('lvlherostart').style.padding = '5px';
+//     document.getElementById('lvlheroend').style.padding = '5px';
+//     document.getElementById('expiriancehero').style.padding = '5px';
+//     document.getElementById('maxday').innerHTML = ''
+//     document.getElementById('lvlherostart').innerHTML = '<label for="">Уровень персонажа</label><input type="number" id="start" min="0" max="30">'
+//     document.getElementById('lvlheroend').innerHTML = '<label for="">Желаемый уровень персонажа</label><input type="number" id="end" min="0" max="30">'
+//     document.getElementById('expiriancehero').innerHTML = '<label for="">Кол-во опыта</label><input type="number" id="experiance" min="0" max="3000" value="0">'
+//     document.getElementById('but').innerHTML = '<input type="button" value="Посчитать игры/день" onclick="game()">'
+//     document.getElementById('weekly').style.padding = '0px';
+//     document.getElementById('weekly').innerHTML = ''
+//     document.getElementById('error').innerHTML = ''
+//     document.getElementById('answer').innerHTML = ''
+// }
+
+function experiance1(){
+    a = 0
+    b = 0
+    winrate = document.getElementById('winrate2').value;
+    gameonday = document.getElementById('gameonday2').value;
+    sumday = document.getElementById('days2').value;
+    sumday = Number(sumday);
+    day1 = sumday;
+
+
+    loserate = 100 - winrate;
+            
+    if(gameonday == "" || days2 == ""){
+        document.getElementById('error2').innerHTML = error;
+    }else{
+
+        switch(winrate){
+            case '10':
+                a = gameonday * winrate/100
+                b = gameonday * loserate/100
+                result = Math.round(a)*100+Math.round(b)*50
+                result = result * day1
+                break;
+            case '20':
+                a = gameonday * winrate/100
+                b = gameonday * loserate/100
+                result = Math.round(a)*100+Math.round(b)*50
+                result = result * day1
+                break;
+            case '30':
+                a = gameonday * winrate/100
+                b = gameonday * loserate/100
+                result = Math.round(a)*100+Math.round(b)*50
+                result = result * day1
+                break;
+            case '40':
+                a = gameonday * winrate/100
+                b = gameonday * loserate/100
+                result = Math.round(a)*100+Math.round(b)*50
+                result = result * day1
+                break;
+            case '50':
+                a = gameonday * winrate/100
+                b = gameonday * loserate/100
+                result = Math.round(a)*100+Math.round(b)*50
+                result = result * day1
+                break;
+            case '60':
+                a = gameonday * winrate/100
+                b = gameonday * loserate/100
+                result = Math.round(a)*100+Math.round(b)*50
+                result = result * day1
+                break;
+            case '70':
+                a = gameonday * winrate/100
+                b = gameonday * loserate/100
+                result = Math.round(a)*100+Math.round(b)*50
+                result = result * day1
+                break;
+            case '80':
+                a = gameonday * winrate/100
+                b = gameonday * loserate/100
+                result = Math.round(a)*100+Math.round(b)*50
+                result = result * day1
+                break;
+            case '90':
+                a = gameonday * winrate/100
+                b = gameonday * loserate/100
+                result = Math.round(a)*100+Math.round(b)*50
+                result = result * day1
+                break;
+        }
+
+        if(document.getElementById('weeklytwo').checked){
+            switch(sumday){
+                case 1:case 2:case 3:case 4:case 5:case 6:case 7:case 8:case 9:case 10:case 11:case 12:case 13:case 14:
+                    result += 1500;
+                    break;
+                case 15:case 16:case 17:case 18:case 19:case 20:case 21:case 22:case 23:case 24:case 25:case 26:case 27:case 28:
+                    result += 3000;
+                    break;
+                case 29:case 30:case 31:case 32:case 33:case 34:case 35:case 36:case 37:case 38:case 39:case 40:case 41:case 42:
+                    result += 4500;
+                    break;
+                case 43:case 44:case 45:case 46:case 47:case 48:case 49:case 50:case 51:case 52:case 53:case 54:case 55:case 56:
+                    result += 6000;
+                    break;
+                case 57:case 58:case 59:case 60:case 61:case 62:case 63:case 64:case 65:case 66:case 67:case 68:case 69:case 70:
+                    result += 7500;
+                    break;
+                case 71:case 72:case 73:case 74:case 75:case 76:case 77:case 78:case 79:case 80:case 81:case 82:case 83:case 84:
+                    result += 9000;
+                    break;
+                case 85:case 86:case 87:case 88:case 89:case 90:case 91:case 92:case 93:case 94:case 95:case 96:case 97:case 98:
+                    result += 10500;
+                    break;
+                case 99:case 100:case 101:case 102:case 103:case 104:case 105:case 106:case 107:case 108:case 109:case 110:case 111:case 112:
+                    result += 12000;
+                    break;
+                default:
+                    document.getElementById('answer').innerHTML = "Текущий максимум дней состовляет 112";
+                    break
+            }
+            document.getElementById('answer2').innerHTML = "Количество заработанного опыта с заданиями героя составляет: " + result;
+            document.getElementById('error2').innerHTML = '';
+        }else{
+            document.getElementById('answer2').innerHTML = "Количество заработанного опыта без заданий героя составляет: " + result;
+            document.getElementById('error2').innerHTML = '';
+        }
+    }
+}
+
+function days(){
     start = document.getElementById('start').value;
     end = document.getElementById('end').value;
     lvl = end;
     exp = document.getElementById('experiance').value;
     winrate = document.getElementById('winrate').value;
     gameonday = document.getElementById('gameonday').value;
-    
+
+
     if(exp == "" || gameonday == "" || start == "" || end == ""){
         document.getElementById('error').innerHTML = error;
     }else{
-        if(start<end){
+        if(end>start){
             document.getElementById('error').innerHTML = "";
             a = 0
             b = 0
@@ -210,60 +372,68 @@ function f(){
                     end = 72050;
                     break;
             }
-
+            
             loserate = 100 - winrate;
+            
+
+            // weekly = 1500 * Math.ceil(date/14)
             switch(winrate){
                 case '10':
                     a = gameonday * winrate/100
                     b = gameonday * loserate/100
                     result = Math.round(a)*100+Math.round(b)*50
+                    // alert(result)
                     break;
                 case '20':
                     a = gameonday * winrate/100
                     b = gameonday * loserate/100
                     result = Math.round(a)*100+Math.round(b)*50
+                    // alert(result)
                     break;
                 case '30':
                     a = gameonday * winrate/100
                     b = gameonday * loserate/100
                     result = Math.round(a)*100+Math.round(b)*50
+                    // alert(result)
                     break;
                 case '40':
                     a = gameonday * winrate/100
                     b = gameonday * loserate/100
                     result = Math.round(a)*100+Math.round(b)*50
+                    // alert(result)
                     break;
                 case '50':
                     a = gameonday * winrate/100
                     b = gameonday * loserate/100
                     result = Math.round(a)*100+Math.round(b)*50
+                    // alert(result)
                     break;
                 case '60':
                     a = gameonday * winrate/100
                     b = gameonday * loserate/100
                     result = Math.round(a)*100+Math.round(b)*50
+                    // alert(result)
                     break;
                 case '70':
                     a = gameonday * winrate/100
                     b = gameonday * loserate/100
                     result = Math.round(a)*100+Math.round(b)*50
+                    // alert(result)
                     break;
                 case '80':
                     a = gameonday * winrate/100
                     b = gameonday * loserate/100
                     result = Math.round(a)*100+Math.round(b)*50
+                    // alert(result)
                     break;
                 case '90':
                     a = gameonday * winrate/100
                     b = gameonday * loserate/100
                     result = Math.round(a)*100+Math.round(b)*50
-                    break;
-                case '100':
-                    a = gameonday * winrate/100
-                    b = gameonday * loserate/100
-                    result = Math.round(a)*100+Math.round(b)*50
+                    // alert(result)
                     break;
             }
+            // result = lvl + weekly*week/14 + winrate ;
             need = end - start - exp;
             // i = weekly;
             needday = 0;
@@ -274,7 +444,10 @@ function f(){
                     i += 1500;
                 }
             }
+
             document.getElementById('answer').innerHTML = 'Необходимое количество дней для поднятия '+ lvl + ' уровня: ' + needday;
+
+
         }else{
             alert('Начальный уровень не должен быть больше конечного')
         }

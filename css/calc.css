@@ -1,5 +1,5 @@
 *{
-    color: rgba(255, 255, 255, .55);
+    color: rgba(255, 255, 255, .55)!important;
 }
 
 option, select, input{
@@ -9,6 +9,8 @@ option, select, input{
 input{
     width: 100px;
 }
+
+
 
 .widthforform{
     display: flex;
@@ -24,6 +26,10 @@ input{
     padding: 5px;
 }
 
+.padding{
+    padding: 0px;
+}
+
 .justify-content-center{
     display: flex;
     justify-content: center;
@@ -33,3 +39,44 @@ input{
     display: flex;
     justify-content: space-between;
 } */
+
+.error{
+    color: red;
+    font-size: 18px;
+    padding: 5px;
+}
+
+@media(max-width: 350px){
+    input{
+        width: 100%;
+    }
+    .flexbetween1{
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 480px){
+    .main{
+        padding-top: 70px;
+    }
+}
+
+@media(max-width: 508px){
+    .pad{
+        width: 100%;
+        text-align: center!important;
+    }
+}
+
+.pad{
+    padding: 5px 10px!important;
+}
+
+.tab-content{
+    margin-top: 10px;
+}
+
+.active{
+    color: rgba(255, 255, 255, .55)!important;
+    background-color: #1a1b20!important;
+}
