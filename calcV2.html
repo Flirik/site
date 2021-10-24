@@ -28,8 +28,6 @@
                     <a class="nav-link" href="heroes.html">Герои</a>
                     <a class="nav-link" href="#">Патчи</a>
                     <a class="nav-link" href="#">Билды</a>
-                  </div>
-                  <div class="navbar-nav">
                     <a class="nav-link" href="calcV2.html">Калькулятор</a>
                   </div>
                 </div>
@@ -42,96 +40,158 @@
       <div class="main">
         <div class="container justify-content-between">
           <div class="row">
-            <div>
+            <div class="col-12">
               <nav class="nav nav-tabs justify-content-around">
-                <a class="nav-item nav-link active pad " id="calc-1" data-toggle="tab" aria-controls="tab1-1" href="#tab1-1">Калькулятор уровня</a>
-                <a class="nav-item nav-link pad" id="calc-2" data-toggle="tab" aria-controls="tab1-2" href="#tab1-2">Калькулятор опыта</a>
-                <a class="nav-item nav-link pad" id="calc-3" data-toggle="tab" aria-controls="tab1-3" href="#tab1-3">Калькулятор игр/день</a>
+                <a class="nav-item nav-link active pad justify-content-center col-4" id="calc-1" data-toggle="tab" aria-controls="tab1-1" href="#tab1-1">Калькулятор уровня</a>
+                <a class="nav-item nav-link pad justify-content-center col-4" id="calc-2" data-toggle="tab" aria-controls="tab1-2" href="#tab1-2">Калькулятор опыта</a>
+                <a class="nav-item nav-link pad justify-content-center col-4" id="calc-3" data-toggle="tab" aria-controls="tab1-3" href="#tab1-3">Калькулятор игр/день</a>
               </nav>
 
               <div class="tab-content">
                 <div class="tab-pane fade show active" id="tab1-1" aria-labelledby="calc-1">
-                  <form>
-                    <div class="flexbetween1" id="lvlherostart">
-                      <label>Уровень персонажа</label>
-                      <input type="number" id="start" min="0" max="30">
+                  <div class="d-md-flex d-block">
+                    <div class="col-md-6 col-12">
+                      <form>
+                        <div class="flexbetween1" id="lvlherostart">
+                          <label>Уровень персонажа</label>
+                          <input type="number" id="start" min="0" max="30">
+                        </div>
+                        <div class="flexbetween1" id="lvlheroend"> 
+                          <label>Желаемый уровень персонажа</label>
+                          <input type="number" id="end" min="0" max="30">
+                        </div>
+                        <div class="flexbetween1" id="expiriancehero">
+                          <label>Кол-во опыта</label>
+                          <input type="number" id="experiance" min="0" max="3000" value="0">
+                        </div>
+                        <div class="flexbetween1">
+                          <label>Кол-во игр в день</label>
+                          <input type="number" id="gameonday">
+                        </div>
+                        <div  class="flexbetween1">
+                          <label>Win Rate</label>
+                          <select id="winrate">
+                              <option value="10">10%</option>
+                              <option value="20">20%</option>
+                              <option value="30">30%</option>
+                              <option value="40">40%</option>
+                              <option value="50">50%</option>
+                              <option value="60">60%</option>
+                              <option value="70">70%</option>
+                              <option value="80">80%</option>
+                              <option value="90">90%</option>
+                          </select>
+                        </div>
+                        <div class="justify-content-center">
+                          <input type="button" value="Посчитать" onclick="days()" >
+                        </div>
+                        <div class="justify-content-center">
+                          <p id="error" class="error"></p>
+                        </div>
+                        <div id="answer"></div>
+                      </form>
                     </div>
-                    <div class="flexbetween1" id="lvlheroend"> 
-                      <label>Желаемый уровень персонажа</label>
-                      <input type="number" id="end" min="0" max="30">
+                    <div class="col-md-6 col-12 d-none d-md-block">
+                      <p>Данный калькулятор позволяет посчитать количество затраченных дней для поднятия определенного уровня героя с указанными играми/день и процентом побед</p>
+                      
+                      <p>Примечание: калькулятор может выдавать ±1 день</p>                       
                     </div>
-                    <div class="flexbetween1" id="expiriancehero">
-                      <label>Кол-во опыта</label>
-                      <input type="number" id="experiance" min="0" max="3000" value="0">
-                    </div>
-                    <div class="flexbetween1">
-                      <label>Кол-во игр в день</label>
-                      <input type="number" id="gameonday">
-                    </div>
-                    <div  class="flexbetween1">
-                      <label>Win Rate</label>
-                      <select id="winrate">
-                          <option value="10">10%</option>
-                          <option value="20">20%</option>
-                          <option value="30">30%</option>
-                          <option value="40">40%</option>
-                          <option value="50">50%</option>
-                          <option value="60">60%</option>
-                          <option value="70">70%</option>
-                          <option value="80">80%</option>
-                          <option value="90">90%</option>
-                      </select>
-                    </div>
-                    <div class="justify-content-center">
-                      <input type="button" value="Посчитать" onclick="days()" >
-                    </div>
-                    <div class="justify-content-center">
-                      <p id="error" class="error"></p>
-                    </div>
-                    <div id="answer"></div>
-                  </form>
+                  </div>
                 </div>
 
                 <div class="tab-pane fade" id="tab1-2" aria-labelledby="calc-2">
-                  <form>
-                    <div class="flexbetween1" id="maxday">
-                      <label>Кол-во дней</label>
-                      <input type="number" id="days2">
+                  <div class="d-md-flex d-block">
+                    <div class="col-md-6 col-12">
+                      <form>
+                        <div class="flexbetween1" id="maxday">
+                          <label>Кол-во дней</label>
+                          <input type="number" id="days2">
+                        </div>
+                        <div class="flexbetween1">
+                          <label>Кол-во игр в день</label>
+                          <input type="number" id="gameonday2">
+                        </div>
+                        <div  class="flexbetween1">
+                          <label>Win Rate</label>
+                          <select id="winrate2">
+                              <option value="10">10%</option>
+                              <option value="20">20%</option>
+                              <option value="30">30%</option>
+                              <option value="40">40%</option>
+                              <option value="50">50%</option>
+                              <option value="60">60%</option>
+                              <option value="70">70%</option>
+                              <option value="80">80%</option>
+                              <option value="90">90%</option>
+                          </select>
+                        </div>
+                        <div class="flexbetween1" id="weekly">
+                          <label>Задания героя</label>
+                          <input type="checkbox" id="weeklytwo">
+                        </div>
+                        <div class="justify-content-center">
+                          <input type="button" value="Посчитать" onclick="experiance1()">
+                        </div>
+                        <div class="justify-content-center">
+                          <p id="error2" class="error"></p>
+                        </div>
+                        <div id="answer2"></div>
+                      </form>
                     </div>
-                    <div class="flexbetween1">
-                      <label>Кол-во игр в день</label>
-                      <input type="number" id="gameonday2">
+                    <div class="col-md-6 col-12 d-none d-md-block">
+                      <p>Данный калькулятор позволяет посчитать, сколько вы сможете получить опыта героя за определенное количество дней, игр в день, процента побед и заданиями героя </p>
+                      <p>Примечание: калькулятор может выдавать ±100 опыта</p>
                     </div>
-                    <div  class="flexbetween1">
-                      <label>Win Rate</label>
-                      <select id="winrate2">
-                          <option value="10">10%</option>
-                          <option value="20">20%</option>
-                          <option value="30">30%</option>
-                          <option value="40">40%</option>
-                          <option value="50">50%</option>
-                          <option value="60">60%</option>
-                          <option value="70">70%</option>
-                          <option value="80">80%</option>
-                          <option value="90">90%</option>
-                      </select>
-                    </div>
-                    <div class="flexbetween1" id="weekly">
-                      <label>Задания героя</label>
-                      <input type="checkbox" id="weeklytwo">
-                    </div>
-                    <div class="justify-content-center">
-                      <input type="button" value="Посчитать" onclick="experiance1()">
-                    </div>
-                    <div class="justify-content-center">
-                      <p id="error2" class="error"></p>
-                    </div>
-                    <div id="answer2"></div>
-                  </form>
+                  </div>
                 </div>
 
                 <div class="tab-pane fade" id="tab1-3" aria-labelledby="calc-3">
-                    3 Это третий текст, который отображается
+                  <div class="d-md-flex d-block">
+                    <div class="col-md-6 col-12">
+                      <form>
+                        <div class="flexbetween1" id="lvlherostart3">
+                          <label>Уровень персонажа</label>
+                          <input type="number" id="start" min="0" max="30">
+                        </div>
+                        <div class="flexbetween1" id="lvlheroend3"> 
+                          <label>Желаемый уровень персонажа</label>
+                          <input type="number" id="end" min="0" max="30">
+                        </div>
+                        <div class="flexbetween1" id="expiriancehero3">
+                          <label>Кол-во опыта</label>
+                          <input type="number" id="experiance" min="0" max="3000" value="0">
+                        </div>
+                        <div class="flexbetween1">
+                          <label>Кол-во дней</label>
+                          <input type="number" id="days3">
+                        </div>
+                        <div  class="flexbetween1">
+                          <label>Win Rate</label>
+                          <select id="winrate3">
+                              <option value="10">10%</option>
+                              <option value="20">20%</option>
+                              <option value="30">30%</option>
+                              <option value="40">40%</option>
+                              <option value="50">50%</option>
+                              <option value="60">60%</option>
+                              <option value="70">70%</option>
+                              <option value="80">80%</option>
+                              <option value="90">90%</option>
+                          </select>
+                        </div>
+                        <div class="justify-content-center">
+                          <input type="button" value="Посчитать" onclick="days()" >
+                        </div>
+                        <div class="justify-content-center">
+                          <p id="error" class="error3"></p>
+                        </div>
+                        <div id="answer3"></div>
+                      </form>
+                    </div>
+                    <div class="col-md-6 col-12 d-none d-md-block">
+                      Данный калькулятор позволяет посчитать, сколько вам потребуется играть в день для того, чтобы получить необходимый уровень персонажа
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
