@@ -186,6 +186,11 @@ header{
     min-height: 100vh;
 }
 
+.flex-wrap{
+        display: flex;
+    flex-wrap: wrap;
+}
+
 ::-webkit-scrollbar {
     width: 0;
 }
