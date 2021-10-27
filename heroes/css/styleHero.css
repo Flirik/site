@@ -1,53 +1,34 @@
-img[src="banner/abbadon.jpg"]{
+img[src="banner/abbadon.jpg"] {
     width: 100%;
 }
 
-p{
+p {
     color: rgba(255, 255, 255, .55);
 }
 
-img[src="../img/logo.png"]{
+img[src="../img/logo.png"] {
     width: 300px;
     height: 65px;
 }
 
-.row .col-4{
+.row .col-4 {
     align-items: center;
 }
 
-h1{
+h1 {
     color: rgba(255, 255, 255, .55);
 }
 
-@media(max-width: 320px){
-    .navbar-brand img[src="../img/logo.png"]{
-        width: 190px;
-        height: 45px;
-    }
-}
-@media (min-width: 321px) and (max-width: 325px){
-    .navbar-brand img[src="../img/logo.png"]{
-        width: 195px;
-        height: 50px;
-    }
-}
-@media (min-width: 326px) and (max-width: 480px){
-    .navbar-brand img[src="../img/logo.png"]{
-        width: 200px;
-        height: 55px;
+@media(max-width: 480px){
+    .main{
+        padding-top: 70px;
     }
 }
 @media(max-width: 280px){
-    .container .row{
-        display: flex;
-        flex-direction: column;
+    .navbar-brand img[src="../img/logo.png"]{
+        width: 165px;
+        height: 40px; 
     }
-
-    img[src="../img/logo.png"]{
-        width: 260px;
-        height: 45px;
-    }
-    
     header .navbar-brand {
         padding-right: 5px;
         padding-left: 5px;
@@ -57,7 +38,56 @@ h1{
     .navbar-toggler {
         margin-right: 0px;
     }
+    .margin1{
+        margin-top: 65px;
+    }
+}
+@media(min-width: 281px) and (max-width: 320px){
+    .navbar-brand img[src="../img/logo.png"]{
+        width: 170px;
+        height: 45px;
+    }
+    .margin1{
+        margin-top: 70px;
+    }
+}
+@media (min-width: 321px) and (max-width: 325px){
+    .navbar-brand img[src="../img/logo.png"]{
+        width: 180px;
+        height: 45px;
+    }
+    .margin1{
+        margin-top: 70px;
+    }
+}
+@media (min-width: 326px) and (max-width: 480px){
+    .navbar-brand img[src="../img/logo.png"]{
+        width: 185px;
+        height: 45px;
+    }
+    .margin1{
+        margin-top: 80px;
+    }
+}
+@media (min-width: 480px){
+    .margin1{
+        margin-top: 100px;
+    }
+}
 
+@media(max-width: 280px) {
+    .container .row {
+        display: flex;
+        flex-direction: column;
+    }
+    header .navbar-brand {
+        padding-right: 5px;
+        padding-left: 5px;
+        margin: 0;
+    }
+    .navbar-toggler {
+        margin-right: 0px;
+    }
     img[src="banner/abbadon.jpg"] {
         width: 250px;
         align-items: center;
@@ -65,11 +95,79 @@ h1{
     }
 }
 
-.accordion-button, .accordion-item, .accordion-button:not(.collapsed){
+.accordion-button,
+.accordion-item,
+.accordion-button:not(.collapsed) {
     background-color: black;
     color: rgba(255, 255, 255, .55);
 }
 
-*{
-    font-family: "Reaver",serif;
+* {
+    font-family: "Reaver", serif!important;
+}
+
+
+
+.leftScreen img, p img {
+    width: 50px;
+    height: 50px;
+}
+
+img[src="../img/Ability/mana.png"],
+img[src="../img/Ability/cooldown.png"]{
+    width: 30px;
+    height: 30px;
+}
+
+.slash{
+    border-right: 1px solid #333438;
+    padding-right: 10px;
+}
+
+.vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.rightScreen{
+    padding-left: 10px;
+}
+
+.margin-bottom{
+    margin-bottom: 10px;
+}
+
+.flex-coloumn{
+    display: flex;
+}
+
+@media (max-width: 425px){
+    .flex-coloumn{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .vertical{
+        flex-direction: row;
+    }
+    
+    .slash{
+        border-right: none;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        border-bottom: 1px solid #333438;
+    }
+    .margin-bottom{
+        margin-bottom: 20px;
+    }
+    .accordion-body, .accordion-button{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.flex-between{
+    display: flex;
+    justify-content: space-between;
 }
